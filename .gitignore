@@ -1,0 +1,14 @@
+# Dependencies
+node_modules/
+
+# Docusaurus build artifacts
+site/build/
+site/.docusaurus/
+site/.cache/
+
+# Local env / OS noise
+.env
+.env.*
+.DS_Store
+*.log
+

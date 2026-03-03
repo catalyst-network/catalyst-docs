@@ -1,0 +1,9 @@
+{
+  "label": "Wallets",
+  "position": 70,
+  "link": {
+    "type": "generated-index",
+    "description": "Wallet user guidance, key safety, and builder integration details."
+  }
+}
+

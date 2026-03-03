@@ -1,0 +1,9 @@
+{
+  "label": "SDK (dApp builders)",
+  "position": 50,
+  "link": {
+    "type": "generated-index",
+    "description": "Build dApps on Catalyst: connect to RPC, sign CTX2, deploy/call contracts, and handle receipts."
+  }
+}
+

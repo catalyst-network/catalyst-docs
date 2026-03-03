@@ -1,0 +1,9 @@
+{
+  "label": "Faucet",
+  "position": 90,
+  "link": {
+    "type": "generated-index",
+    "description": "How to request testnet funds, and how to run/secure a faucet service."
+  }
+}
+

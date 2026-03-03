@@ -1,0 +1,9 @@
+{
+  "label": "Overview",
+  "position": 10,
+  "link": {
+    "type": "generated-index",
+    "description": "What Catalyst is, how networks are identified, and the concepts you'll see throughout the docs."
+  }
+}
+

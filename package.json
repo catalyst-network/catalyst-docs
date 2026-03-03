@@ -1,0 +1,17 @@
+{
+  "name": "catalyst-docs",
+  "private": true,
+  "workspaces": [
+    "site"
+  ],
+  "scripts": {
+    "start": "npm --workspace site run start",
+    "build": "npm --workspace site run build",
+    "serve": "npm --workspace site run serve",
+    "typecheck": "npm --workspace site run typecheck",
+    "clear": "npm --workspace site run clear"
+  },
+  "engines": {
+    "node": ">=20.0"
+  }
+}

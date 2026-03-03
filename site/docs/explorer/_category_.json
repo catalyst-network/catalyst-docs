@@ -1,0 +1,9 @@
+{
+  "label": "Explorer",
+  "position": 80,
+  "link": {
+    "type": "generated-index",
+    "description": "How to use the explorer, and how to run your own explorer/indexer against your node."
+  }
+}
+

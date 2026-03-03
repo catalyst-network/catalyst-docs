@@ -1,0 +1,9 @@
+{
+  "label": "Quickstarts",
+  "position": 20,
+  "link": {
+    "type": "generated-index",
+    "description": "Pick a goal and follow a copy/paste quickstart."
+  }
+}
+
