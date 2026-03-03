@@ -4,6 +4,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
+const useCustomDomain = process.env.CATALYST_DOCS_CUSTOM_DOMAIN === 'true';
+
 const config: Config = {
   title: 'Catalyst Docs',
   tagline: 'Operators, wallets, builders, and protocol/RPC reference.',
@@ -14,9 +16,11 @@ const config: Config = {
     v4: true, // Improve compatibility with the upcoming Docusaurus v4
   },
 
-  // GitHub Pages (project pages) URL + baseUrl.
-  url: 'https://catalyst-network.github.io',
-  baseUrl: '/catalyst-docs/',
+  // Hosting:
+  // - GitHub Pages project site: https://catalyst-network.github.io/catalyst-docs/  (baseUrl: /catalyst-docs/)
+  // - Custom domain: https://docs.catalystnet.org/                               (baseUrl: /)
+  url: useCustomDomain ? 'https://docs.catalystnet.org' : 'https://catalyst-network.github.io',
+  baseUrl: useCustomDomain ? '/' : '/catalyst-docs/',
 
   // GitHub pages deployment config.
   organizationName: 'catalyst-network',

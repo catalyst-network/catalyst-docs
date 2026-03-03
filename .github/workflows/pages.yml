@@ -18,6 +18,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    env:
+      # When the repo has a GitHub Pages custom domain configured (e.g. docs.catalystnet.org),
+      # the site is served from the domain root and must be built with baseUrl "/".
+      CATALYST_DOCS_CUSTOM_DOMAIN: 'true'
     steps:
       - name: Checkout
         uses: actions/checkout@v4

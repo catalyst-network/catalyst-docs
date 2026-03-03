@@ -9,6 +9,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    env:
+      # Match production when using a GitHub Pages custom domain.
+      CATALYST_DOCS_CUSTOM_DOMAIN: 'true'
     steps:
       - name: Checkout
         uses: actions/checkout@v4
