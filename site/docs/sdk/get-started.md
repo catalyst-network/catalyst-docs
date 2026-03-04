@@ -17,8 +17,27 @@ This section is for builders (dApps, tooling, wallets). If you’re just using a
 
 ### 1) Install the SDK
 
+:::note
+`@catalyst/sdk` is a TypeScript package that is intended to be published to npm.
+
+If the package is not published yet, use the **repo-based workflow** below (clone + build) or use the **deploy CLI** directly:
+
+- **[Deploy a contract](/docs/sdk/deploy-contract)** (uses `catalyst-sdk` CLI)
+:::
+
+#### Option A: npm (when published)
+
 ```bash
 npm install @catalyst/sdk
+```
+
+#### Option B: repo (works today)
+
+```bash
+git clone https://github.com/catalyst-network/catalyst-sdk
+cd catalyst-sdk
+npm install
+npm run build
 ```
 
 ### 2) Connect to RPC and fetch the tx signing domain

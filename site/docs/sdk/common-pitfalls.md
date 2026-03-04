@@ -47,3 +47,34 @@ Fix:
 
 - increase poll interval and add exponential backoff + jitter
 
+## Explorer shows “missing txs”
+
+Symptom:
+
+- your deploy/call CLI shows `receipt_status: applied`
+- but the block explorer does not show the transaction
+
+Cause (common):
+
+- explorer/indexer is behind, stalled, or pointed at a different backend/RPC
+
+Fix:
+
+- treat RPC as source of truth:
+  - `catalyst_getTransactionReceipt(txid)` (check `applied_cycle`)
+  - `catalyst_getBlockByNumber(applied_cycle, false)` (check tx is included)
+
+## Payable calls / `msg.value`
+
+Symptom:
+
+- a contract requires a non-zero `msg.value` (e.g. fee-based registration)
+
+Cause:
+
+- current Catalyst testnet CALL transactions do not carry an Ethereum-style `value`
+
+Fix:
+
+- set fees to zero for testnet workflows, or avoid payable patterns until value support is exposed
+

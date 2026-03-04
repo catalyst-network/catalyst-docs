@@ -10,10 +10,25 @@ title: "Quickstart: I want to build a dApp"
 
 ## Steps
 
-1) Install the SDK package:
+1) Get the SDK:
+
+:::note
+If `@catalyst/sdk` is not published to npm yet, use the repo-based workflow below (clone + build).
+:::
+
+Option A (npm, when published):
 
 ```bash
 npm install @catalyst/sdk
+```
+
+Option B (repo, works today):
+
+```bash
+git clone https://github.com/catalyst-network/catalyst-sdk
+cd catalyst-sdk
+npm install
+npm run build
 ```
 
 2) Read the tx lifecycle (so you understand domain separation + receipts):
