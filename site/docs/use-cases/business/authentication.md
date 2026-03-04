@@ -3,9 +3,9 @@ title: Authentication (email trust & anti-impersonation)
 sidebar_position: 1
 ---
 
-:::note
-This page is based on an **older partner research PDF** and is provided as a conceptual use case. It describes “Timescribe” style flows that are **not shipped as a built-in Catalyst product** today.
-:::
+Download the source PDF:
+
+- [`authentication.pdf`](/files/use-cases/authentication.pdf)
 
 ## Problem
 

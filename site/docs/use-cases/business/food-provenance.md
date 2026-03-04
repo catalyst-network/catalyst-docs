@@ -3,9 +3,9 @@ title: Food provenance (traceability & trust)
 sidebar_position: 3
 ---
 
-:::note
-Based on an older partner research PDF. Treat as a conceptual use case (not a shipped Catalyst app).
-:::
+Download the source PDF:
+
+- [`food_production.pdf`](/files/use-cases/food_production.pdf)
 
 ## Problem
 

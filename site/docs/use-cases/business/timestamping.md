@@ -3,9 +3,9 @@ title: Timestamping (prove data existed at a time)
 sidebar_position: 2
 ---
 
-:::note
-Based on an older partner research PDF. Treat as a conceptual use case (not a shipped Catalyst app).
-:::
+Download the source PDF:
+
+- [`TimeStamping.pdf`](/files/use-cases/TimeStamping.pdf)
 
 ## Problem
 

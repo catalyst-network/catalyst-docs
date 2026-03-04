@@ -3,9 +3,9 @@ title: Waste management (recycling incentives & accountability)
 sidebar_position: 5
 ---
 
-:::note
-Based on an older partner research PDF. Treat as a conceptual use case (not a shipped Catalyst app).
-:::
+Download the source PDF:
+
+- [`waste_management.pdf`](/files/use-cases/waste_management.pdf)
 
 ## Problem
 

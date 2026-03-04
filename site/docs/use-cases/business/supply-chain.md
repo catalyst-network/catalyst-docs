@@ -3,9 +3,9 @@ title: Supply chain resilience (visibility & automation)
 sidebar_position: 4
 ---
 
-:::note
-Based on an older partner research PDF written during COVID-era supply chain disruption. Treat as a conceptual use case (not a shipped Catalyst app).
-:::
+Download the source PDF:
+
+- [`supply_chain.pdf`](/files/use-cases/supply_chain.pdf)
 
 ## Problem
 
