@@ -109,14 +109,24 @@ code_verified: true
 
 This is a **transaction** (not `eth_call`).
 
+You must provide **calldata bytes** (hex). If you have Foundry installed, you can generate calldata with `cast calldata`.
+
 ```bash
+DATA=$(cast calldata "setNumber(uint256)" 42)
+
 node packages/cli/dist/index.js call \
   --rpc-url "$RPC_URL" \
   --key-file ../catalyst-node-rust/wallet.key \
   --to 0x<contract_address> \
-  --data 0x \
+  --data "$DATA" \
   --wait
 ```
+
+::::caution
+EVM `value` (payable calls)
+
+On current Catalyst testnet, EVM calls do not carry an Ethereum-style `value`. Contracts that require `msg.value` may not be usable until value support is exposed by the runtime/RPC.
+::::
 
 ### Option B: Deploy to public testnet
 

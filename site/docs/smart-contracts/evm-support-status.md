@@ -13,6 +13,7 @@ Based on the current node implementation:
 - **Read code**: supported via `catalyst_getCode(address20)`
 - **Storage reads**: supported via `catalyst_getStorageAt(address20, slot32)`
 - **Receipts**: supported via `catalyst_getTransactionReceipt(tx_id)`
+- **`eth_call` equivalent**: not a standard part of the Catalyst workflow today (calls are submitted as transactions)
 
 Canonical references:
 
@@ -25,6 +26,7 @@ Canonical references:
 - **Submission method**: `catalyst_sendRawTransaction` (not `eth_sendRawTransaction`)
 - **Signing domain**: `catalyst_getTxDomain` (single-call domain separation; includes `genesis_hash`)
 - **Cycle/block semantics**: some cycles produce no block/LSU; explorers must handle gaps
+- **Payable calls**: EVM calls do not currently carry an Ethereum-style `value` (`msg.value`)
 
 ## Verify
 
