@@ -91,7 +91,11 @@ const config: Config = {
       title: 'Catalyst Docs',
       logo: {
         alt: 'Catalyst Docs',
-        src: 'img/logo.svg',
+        // Prefer the official logo from the Catalyst media pack.
+        // Source: https://github.com/catalyst-network/Community/tree/master/media-pack
+        src: 'https://raw.githubusercontent.com/catalyst-network/Community/master/media-pack/logo-black.png',
+        srcDark:
+          'https://raw.githubusercontent.com/catalyst-network/Community/master/media-pack/logo-white.png',
       },
       items: [
         {

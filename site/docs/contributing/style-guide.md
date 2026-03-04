@@ -27,6 +27,14 @@ Be consistent after defining once:
 - Commands must be copy/pasteable.
 - Include **expected output snippets** when operators/users need to know what “success” looks like.
 
+## Screenshots and images
+
+- Store screenshots under `site/static/img/screenshots/` and link them like:
+  - `![Alt text](/img/screenshots/<file>.png)`
+- Prefer **cropped** screenshots that show only the relevant UI.
+- Do not include secrets in screenshots (keys, recovery phrases, auth tokens, IPs if sensitive).
+- Prefer official logos from the **[media pack](https://github.com/catalyst-network/Community/tree/master/media-pack)**.
+
 ## Security and safety requirements
 
 - Never instruct users to paste private keys into websites, issue trackers, logs, or support chats.
