@@ -3,6 +3,12 @@ sidebar_position: 1
 title: "RPC: transaction lifecycle"
 ---
 
+:::note Not for everyday users
+If you’re just using a wallet or an app, you don’t need this page.
+
+This page is for people building wallets, SDKs, dApps, and tooling that submit transactions directly to Catalyst RPC.
+:::
+
 This page is the canonical “how a tx moves through Catalyst” reference:
 
 1) fetch domain  

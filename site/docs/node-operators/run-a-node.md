@@ -19,18 +19,34 @@ Running a public node is operationally risky. Treat the host as production infra
 
 - Linux host (Ubuntu/Debian examples below)
 - Open TCP **30333** (P2P). Open **8545** (RPC) only if you know what you’re doing (prefer IP allowlist / SSH tunnel).
-- Build deps (for source builds): `build-essential`, `clang`, `cmake`, `libssl-dev`
+- Either:
+  - a **release binary** (no build), or
+  - build deps (for source builds): `build-essential`, `clang`, `cmake`, `libssl-dev`
 
 ## Steps
 
-### 1) Install build dependencies (Ubuntu/Debian)
+### 1) Get the binary (no-build or source-build)
+
+Choose one:
+
+- **No build (recommended)**: download a `catalyst-cli` release binary
+  - `https://github.com/catalyst-network/catalyst-node-rust/releases`
+- **Build from source**: continue with the steps below
+
+If you downloaded a binary, install it to a stable path used by systemd, for example:
+
+```bash
+sudo install -m 0755 catalyst-cli /var/lib/catalyst/node/catalyst-cli
+```
+
+### 2) Install build dependencies (Ubuntu/Debian) (source builds only)
 
 ```bash
 sudo apt update
 sudo apt install -y build-essential pkg-config libssl-dev clang libclang-dev cmake
 ```
 
-### 2) Build the node
+### 3) Build the node (source builds only)
 
 ```bash
 git clone https://github.com/catalyst-network/catalyst-node-rust
@@ -52,7 +68,7 @@ The binary is:
 ./target/release/catalyst-cli --help
 ```
 
-### 3) Create a dedicated user + directories
+### 4) Create a dedicated user + directories
 
 ```bash
 sudo useradd --system --create-home --home-dir /var/lib/catalyst --shell /usr/sbin/nologin catalyst || true
@@ -61,7 +77,7 @@ sudo chown -R catalyst:catalyst /var/lib/catalyst
 sudo chmod 700 /var/lib/catalyst
 ```
 
-### 4) Generate a config (safe defaults)
+### 5) Generate a config (safe defaults)
 
 Catalyst can generate a default config file if the path doesn’t exist.
 
@@ -81,7 +97,7 @@ Stop it (Ctrl+C) after it starts once—this creates sibling directories near th
 Do **not** delete `node.key` during resets/upgrades unless you intend to change the node’s network identity.
 :::
 
-### 5) Run under systemd
+### 6) Run under systemd
 
 Create a unit file:
 
@@ -122,6 +138,8 @@ sudo install -o catalyst -g catalyst -m 0755 \
   /var/lib/catalyst/node/catalyst-cli
 ```
 
+If you used a release binary and already installed it to `/var/lib/catalyst/node/catalyst-cli`, you can skip this step.
+
 Start:
 
 ```bash
@@ -130,7 +148,7 @@ sudo systemctl enable --now catalyst
 sudo systemctl status catalyst --no-pager
 ```
 
-### 6) Firewall (minimum)
+### 7) Firewall (minimum)
 
 If using `ufw`:
 

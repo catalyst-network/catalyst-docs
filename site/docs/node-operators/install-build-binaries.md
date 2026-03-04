@@ -5,12 +5,28 @@ title: Install / build binaries
 
 ## You will need
 
-- Rust toolchain (for source builds)
-- Linux build dependencies (RocksDB, OpenSSL, toolchain)
+- Linux host
+- Either:
+  - a **release binary** (no build), or
+  - a Rust toolchain + build dependencies (source build)
 
 ## Steps
 
-### Build from source (recommended)
+### Option A (recommended): download a release binary (no build)
+
+If you want to run a node without compiling anything, use a published release.
+
+1) Go to the releases page and download the latest `catalyst-cli` for Linux.
+
+- Node repo releases: `https://github.com/catalyst-network/catalyst-node-rust/releases`
+
+2) Verify the checksum (recommended) and install the binary somewhere stable, for example:
+
+```bash
+sudo install -m 0755 catalyst-cli /usr/local/bin/catalyst-cli
+```
+
+### Option B: build from source
 
 ```bash
 git clone https://github.com/catalyst-network/catalyst-node-rust
