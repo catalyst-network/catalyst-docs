@@ -6,6 +6,13 @@ sidebar_position: 1
 
 This is the public documentation hub for the Catalyst ecosystem.
 
+Official links:
+
+- **Website**: `https://catalystnet.org/`
+- **Explorer**: `https://explorer.catalystnet.org/`
+- **Faucet**: `https://faucet.catalystnet.org/`
+- **More**: see **[Official links](/docs/overview/official-links)**.
+
 ## Choose your path
 
 - **Everyday users**: start with **[Use cases (for everyone)](/docs/use-cases/send-money)** or **[Quickstart: use Catalyst apps](/docs/quickstarts/i-want-to-use-apps)**.

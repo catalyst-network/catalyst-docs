@@ -10,6 +10,13 @@ const config: Config = {
   title: 'Catalyst Docs',
   tagline: 'Operators, wallets, builders, and protocol/RPC reference.',
   favicon: 'img/favicon.ico',
+  customFields: {
+    links: {
+      website: 'https://catalystnet.org/',
+      explorer: 'https://explorer.catalystnet.org/',
+      faucet: 'https://faucet.catalystnet.org/',
+    },
+  },
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -76,6 +83,8 @@ const config: Config = {
   themeConfig: {
     image: 'img/docusaurus-social-card.jpg',
     colorMode: {
+      defaultMode: 'light',
+      disableSwitch: false,
       respectPrefersColorScheme: true,
     },
     navbar: {
@@ -92,6 +101,30 @@ const config: Config = {
           label: 'Docs',
         },
         {
+          to: '/docs/overview/official-links',
+          label: 'Links',
+          position: 'left',
+        },
+        {
+          type: 'search',
+          position: 'right',
+        },
+        {
+          href: 'https://catalystnet.org/',
+          label: 'Website',
+          position: 'right',
+        },
+        {
+          href: 'https://explorer.catalystnet.org/',
+          label: 'Explorer',
+          position: 'right',
+        },
+        {
+          href: 'https://faucet.catalystnet.org/',
+          label: 'Faucet',
+          position: 'right',
+        },
+        {
           href: 'https://github.com/catalyst-network/catalyst-docs',
           label: 'GitHub',
           position: 'right',
@@ -101,6 +134,14 @@ const config: Config = {
     footer: {
       style: 'dark',
       links: [
+        {
+          title: 'Catalyst',
+          items: [
+            { label: 'Website', href: 'https://catalystnet.org/' },
+            { label: 'Explorer', href: 'https://explorer.catalystnet.org/' },
+            { label: 'Faucet', href: 'https://faucet.catalystnet.org/' },
+          ],
+        },
         {
           title: 'Docs',
           items: [

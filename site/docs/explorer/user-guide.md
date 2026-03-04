@@ -7,6 +7,10 @@ title: Explorer user guide
 
 - The explorer URL for your network (public testnet or your operator’s explorer)
 
+Official public explorer:
+
+- `https://explorer.catalystnet.org/`
+
 ## Steps
 
 ### 1) Look up a transaction

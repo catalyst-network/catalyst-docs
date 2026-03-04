@@ -40,6 +40,7 @@ npm run serve
 This repo is set up to build the site on every PR, and deploy `site/build/` to GitHub Pages on merges to `main`.
 
 Notes:
-- For project pages, Docusaurus uses `baseUrl: "/catalyst-docs/"`.
-- The deployed URL will be the org GitHub Pages host + repo path (example: `https://catalyst-network.github.io/catalyst-docs/`).
+- For the current setup (custom domain), the site is served from the domain root:
+  - `https://docs.catalystnet.org/`
+- If you host as a GitHub Pages **project site** instead, the site is served under `/<repo>/` and Docusaurus must use `baseUrl: "/catalyst-docs/"`.
 

@@ -7,8 +7,12 @@ The faucet is **testnet-only** and is intended to provide small amounts of KAT f
 
 ## You will need
 
-- Your address (EVM `address20`, `0x...`) as requested by the faucet UI/API
+- Your Catalyst **`pubkey32`** address (`0x` + 64 hex chars) as requested by the faucet UI/API
 - Access to the hosted faucet UI (or your operator’s faucet)
+
+Official public faucet:
+
+- `https://faucet.catalystnet.org/`
 
 ## Steps
 
