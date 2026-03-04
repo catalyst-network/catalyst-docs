@@ -3,6 +3,11 @@ sidebar_position: 1
 title: Get started
 ---
 
+This section is for builders (dApps, tooling, wallets). If you’re just using apps, start with:
+
+- **[Use cases (for everyone)](/docs/use-cases/send-money)**
+- **[Quickstart: use Catalyst apps](/docs/quickstarts/i-want-to-use-apps)**
+
 ## You will need
 
 - Node.js >= 20
@@ -34,6 +39,11 @@ console.log({
 ## Verify
 
 Your domain fetch should succeed and `genesisHashLen` should be `32`.
+
+## Next steps
+
+- **[Deploy a contract](/docs/sdk/deploy-contract)**
+- **[Common pitfalls](/docs/sdk/common-pitfalls)**
 
 ## Troubleshooting
 

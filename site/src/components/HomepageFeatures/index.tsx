@@ -12,6 +12,22 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
+    title: 'Use cases (for everyone)',
+    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    description: (
+      <>
+        Send money, play games, and use apps where you control your assets and identity—without needing to learn jargon.
+        <div className={styles.featureLinks}>
+          <Link to="/docs/use-cases/send-money">Send money</Link>
+          {' · '}
+          <Link to="/docs/use-cases/games-assets">Games & assets</Link>
+          {' · '}
+          <Link to="/docs/use-cases/social-you-control">Social</Link>
+        </div>
+      </>
+    ),
+  },
+  {
     title: 'Node operators',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
@@ -28,21 +44,21 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Build dApps and tooling against the RPC surface and CTX2 signing model.
+        Build dApps and tooling against Catalyst, with a focus on safe defaults and simple deploy flows.
         <div className={styles.featureLinks}>
-          <Link to="/docs/rpc-reference/transaction-lifecycle">RPC: tx lifecycle</Link>
-          {' · '}
           <Link to="/docs/sdk/get-started">SDK get started</Link>
+          {' · '}
+          <Link to="/docs/sdk/deploy-contract">Deploy a contract</Link>
         </div>
       </>
     ),
   },
   {
-    title: 'Wallet + explorer + faucet',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Wallet, explorer, and faucet',
+    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        End-user guides and operator runbooks for ecosystem apps.
+        Guides for using Catalyst tools (and running them if you’re an operator).
         <div className={styles.featureLinks}>
           <Link to="/docs/wallets/wallet-user-guide">Wallet user guide</Link>
           {' · '}
@@ -57,7 +73,7 @@ const FeatureList: FeatureItem[] = [
 
 function Feature({title, Svg, description}: FeatureItem) {
   return (
-    <div className={clsx('col col--4')}>
+    <div className={clsx('col col--3')}>
       <div className="text--center">
         <Svg className={styles.featureSvg} role="img" />
       </div>

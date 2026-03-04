@@ -4,10 +4,11 @@ sidebar_position: 1
 
 # Catalyst documentation hub
 
-This site is the single docs home for the Catalyst ecosystem.
+This is the public documentation hub for the Catalyst ecosystem.
 
 ## Choose your path
 
+- **Everyday users**: start with **[Use cases (for everyone)](/docs/use-cases/send-money)** or **[Quickstart: use Catalyst apps](/docs/quickstarts/i-want-to-use-apps)**.
 - **Node operators**: start with **[Run a node](/docs/node-operators/run-a-node)**.
 - **Wallet users**: start with **[Use the wallet](/docs/quickstarts/i-want-to-use-the-wallet)**.
 - **dApp builders**: start with **[Deploy a contract](/docs/quickstarts/i-want-to-deploy-a-contract)**, then **[RPC: transaction lifecycle](/docs/rpc-reference/transaction-lifecycle)**.

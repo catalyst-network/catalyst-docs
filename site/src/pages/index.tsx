@@ -18,6 +18,9 @@ function HomepageHeader() {
         </Heading>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
+          <Link className="button button--secondary button--lg" to="/docs/quickstarts/i-want-to-use-apps">
+            Use apps
+          </Link>
           <Link
             className="button button--secondary button--lg"
             to="/docs/node-operators/run-a-node">
@@ -25,9 +28,6 @@ function HomepageHeader() {
           </Link>
           <Link className="button button--secondary button--lg" to="/docs/sdk/deploy-contract">
             Deploy a contract
-          </Link>
-          <Link className="button button--secondary button--lg" to="/docs/rpc-reference/transaction-lifecycle">
-            RPC: tx lifecycle
           </Link>
           <Link className="button button--secondary button--lg" to="/docs/faucet/user-guide">
             Get testnet funds
