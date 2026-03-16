@@ -56,6 +56,13 @@ Canonical source of truth:
 - **Experimental**: `catalyst_peerCount()` → `u64`
 - **Stable**: `catalyst_version()` → string
 
+## Tokenomics
+
+- **Stable**: `catalyst_getTokenomicsInfo()` → tokenomics parameters (issuance, fee routing, reward split)
+  - includes `block_reward_atoms` (`1000000000` for `1 KAT`) and `estimated_issued_atoms`
+  - includes `fee_burn_bps`, `fee_to_reward_pool_bps`, `fee_to_treasury_bps`
+  - includes `producer_set_reward_bps`, `waiting_pool_reward_bps`
+
 ## EVM helpers
 
 - **Stable**: `catalyst_getCode(address20)` → `0x...` (empty `0x` if none)

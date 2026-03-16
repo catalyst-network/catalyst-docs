@@ -31,6 +31,15 @@ Catalyst is a blockchain stack (node + RPC + SDK + apps) focused on running a pr
   - **`pubkey32`**: 32-byte hex public key used as the account identifier in protocol transactions (example: `0x<64 hex>`).
   - **`address20`**: 20-byte hex EVM address used for contracts and EVM account derivations (example: `0x<40 hex>`).
 
+## Economics at a glance
+
+- Fair launch baseline: `0 KAT` at genesis.
+- Fixed issuance baseline: `1 KAT` per successful cycle.
+- Unit scale baseline: `1 KAT = 1_000_000_000 atoms`.
+- Fee policy baseline: fees are mandatory; 70% burned and 30% routed to rewards.
+
+For current parameters and operator verification, see **[Overview: tokenomics](/docs/overview/tokenomics)**.
+
 ## Verify (quick sanity checks)
 
 If you have an RPC URL, you can confirm basic chain identity:

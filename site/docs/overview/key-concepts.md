@@ -47,3 +47,14 @@ Canonical references:
 
 See **[RPC: transaction lifecycle](/docs/rpc-reference/transaction-lifecycle)** for end-to-end examples.
 
+## Tokenomics (v1 baseline)
+
+- Fair launch: `0 KAT` at genesis.
+- Fixed issuance: `1 KAT` per successful cycle (target ~20s).
+- Unit scale: `1 KAT = 1_000_000_000 atoms` (`block_reward_atoms = 1_000_000_000`).
+- Fee routing: `70%` burn, `30%` reward pool, `0%` treasury.
+- Reward split baseline: producer set gets larger share; eligible waiting workers also receive rewards.
+- Fee credits: only for eligible waiting workers, non-transferable, and never a replacement for mandatory transaction fees.
+
+See **[Overview: tokenomics](/docs/overview/tokenomics)** for parameters, rationale, and verification.
+

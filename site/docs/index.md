@@ -20,6 +20,7 @@ Official links:
 - **Wallet users**: start with **[Use the wallet](/docs/quickstarts/i-want-to-use-the-wallet)**.
 - **dApp builders**: start with **[Deploy a contract](/docs/quickstarts/i-want-to-deploy-a-contract)**, then **[RPC: transaction lifecycle](/docs/rpc-reference/transaction-lifecycle)**.
 - **Explorer / faucet operators**: start with **[Explorer operator guide](/docs/explorer/operator-guide)** and **[Faucet operator guide](/docs/faucet/operator-guide)**.
+- **Anyone reviewing economics**: read **[Tokenomics (v1 baseline)](/docs/overview/tokenomics)**.
 
 ## Stability labels
 
