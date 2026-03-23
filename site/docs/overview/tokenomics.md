@@ -11,6 +11,10 @@ Canonical source of truth:
 - `catalyst-node-rust/docs/tokenomics-spec.md`
 - RPC: `catalyst_getTokenomicsInfo`
 
+## Protocol vs ecosystem (roadmap)
+
+This page describes **what the v1 node protocol implements** (issuance, fee routing, reward split, fee credits). Separate **products**—wallets, explorers, bridges, liquidity, dashboards, or community programs—may ship on their own timelines. Treat anything not in the canonical node docs above as **not a protocol guarantee** until it is implemented and documented there.
+
 ## One-paragraph explainer
 
 Catalyst v1 uses a fair-launch model with `0 KAT` at genesis and fixed issuance of `1 KAT` per successful cycle (target ~20 seconds). Unit scale is fixed at `1 KAT = 1_000_000_000 atoms`. Transaction fees are mandatory and split deterministically: `70%` is burned, `30%` goes into the reward pool, and `0%` goes to treasury. Each cycle, rewards are shared between selected producers and eligible waiting workers, with the larger share to active producers and a meaningful share to waiting participants. Waiting workers can also accrue non-transferable fee credits (after warmup and eligibility checks) that offset only their own transaction fees.
@@ -51,11 +55,36 @@ Publish these values exactly:
 - Convert atoms to KAT with: `KAT = atoms / 1_000_000_000`.
 - Prefer storing and comparing integer atom values in automation; render KAT as a UI/display conversion.
 
+## KAT vs fee credits
+
+- **KAT** is the normal on-chain balance: transferable between accounts subject to protocol and mempool rules (same idea as typical chain native currency).
+- **Fee credits** are **not** a second tradeable token. They are **non-transferable**, only reduce **your own** mandatory fees within caps, and accrue only for **eligible waiting workers** under the rules below.
+
+Fair launch means you can **participate without buying KAT** in the sense of **no premine and no protocol token sale**—issuance and (where eligible) fee credits come from protocol rules, not from a project-priced offering. That is different from claiming a **market price**; see the next section.
+
+## Market price (not in protocol)
+
+The node does **not** enforce a “launch price,” DEX quote, or investment return. Communicating **no ICO** or **no premine** is accurate; any **market price** for KAT on external venues is **outside** the core protocol unless you add separate infrastructure later.
+
+## Participation: who earns rewards and credits? {#participation-earnings}
+
+**Running software that syncs the chain** is **not** the same as:
+
+- being in the **registered worker** set, and  
+- satisfying **eligibility** rules (warmup, churn windows, producer vs waiting role for that cycle).
+
+Only **selected producers** and **eligible waiting workers** participate in the reward split and fee-credit rules described here. If you operate a node, see **[Run a node](/docs/node-operators/run-a-node)** and the canonical node operator docs for how roles and registration work in your deployment.
+
 ## Reward flow per successful cycle
 
-1. Mint fixed issuance (`1 KAT`).
-2. Route 30% of cycle fees into reward pool (70% burned, 0% treasury).
-3. Split reward pool between selected producer set (larger share) and eligible waiting worker pool (smaller share).
+The **reward pool** for a successful cycle is formed from:
+
+1. **Fixed issuance**: mint `1 KAT` (`1_000_000_000` atoms).
+2. **Fee-routed share**: add `30%` of that cycle’s fees to the reward pool; `70%` of fees are burned; `0%` goes to treasury.
+
+Then:
+
+3. Split the **combined** reward pool between the selected producer set (larger share) and the eligible waiting worker pool (smaller share).
 4. Accrue fee credits for eligible waiting workers (subject to warmup, max-balance cap, daily spend cap, and churn-penalty eligibility window).
 
 ## Fee credits (correct wording)
@@ -71,6 +100,13 @@ Avoid this wording:
 - All participants always accrue fee credits.
 - Fee credits are transferable.
 - Fee credits remove the need for transaction fees (fees remain mandatory).
+
+## Communications (ecosystem writers)
+
+When describing economics to users or investors:
+
+- Prefer **verifiable** language: parameters exist in code and via `catalyst_getTokenomicsInfo`.
+- Do **not** imply **guaranteed** market value, **fixed APY**, or investment returns—issuance is per-cycle protocol rules, not a yield product.
 
 ## Verify on a running node
 
@@ -111,3 +147,11 @@ No. Fee credits are non-transferable and scoped to the same sender identity.
 ### Could Catalyst run out of tokens quickly?
 
 No. At `1 KAT` minted every `20s`, the theoretical numeric supply ceiling (from `u64` atom representation) is extremely far out, roughly `11,699 years` of continuous successful cycles.
+
+### Does the protocol set a price for KAT?
+
+No. There is no protocol-enforced market price or oracle in v1. Any trading price depends on **external** markets and liquidity, not on a number encoded in the node.
+
+### Do I earn just by syncing a node?
+
+Not automatically. Earning under these rules requires the correct **worker/producer role**, **registration**, and **eligibility**—not merely running a sync client. See **[Participation: who earns rewards and credits?](#participation-earnings)** (above).

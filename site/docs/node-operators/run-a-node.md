@@ -15,6 +15,10 @@ Running a public node is operationally risky. Treat the host as production infra
 - test changes on a devnet/local testnet first
 :::
 
+## Rewards, workers, and eligibility
+
+Tokenomics (KAT issuance, producer vs waiting-pool split, fee credits) applies to **consensus roles**: **registered workers** and **eligibility** rules—not to “any process that follows the chain.” Simply syncing blocks or exposing RPC does **not** by itself put you in the producer or eligible waiting-worker paths. For the v1 policy summary and operator verification, see **[Tokenomics (v1 baseline)](/docs/overview/tokenomics)** and the upstream **[node operator guide](https://github.com/catalyst-network/catalyst-node-rust/blob/main/docs/node-operator-guide.md)** for how your deployment registers workers and participates in consensus.
+
 ## You will need
 
 - Linux host (Ubuntu/Debian examples below)

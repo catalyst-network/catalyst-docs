@@ -40,6 +40,10 @@ Catalyst is a blockchain stack (node + RPC + SDK + apps) focused on running a pr
 
 For current parameters and operator verification, see **[Overview: tokenomics](/docs/overview/tokenomics)**.
 
+## Protocol vs products
+
+**On-chain economics and roles** (issuance, fees, rewards, fee credits) are defined by the **node / consensus** implementation and documented in **[Tokenomics](/docs/overview/tokenomics)**. **Wallets, bridges, explorers, and other apps** are separate; ship and version them independently. Public claims should match what is in the protocol docs—anything else is **ecosystem or roadmap**, not a guarantee from the node.
+
 ## Verify (quick sanity checks)
 
 If you have an RPC URL, you can confirm basic chain identity:

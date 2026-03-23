@@ -56,5 +56,5 @@ See **[RPC: transaction lifecycle](/docs/rpc-reference/transaction-lifecycle)** 
 - Reward split baseline: producer set gets larger share; eligible waiting workers also receive rewards.
 - Fee credits: only for eligible waiting workers, non-transferable, and never a replacement for mandatory transaction fees.
 
-See **[Overview: tokenomics](/docs/overview/tokenomics)** for parameters, rationale, and verification.
+See **[Overview: tokenomics](/docs/overview/tokenomics)** for parameters, rationale, verification, and **who qualifies** for rewards (registered workers + eligibility—not “sync only”).
 
